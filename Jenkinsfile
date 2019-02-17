@@ -10,7 +10,7 @@ node {
     } 
   }
 
-  stage('Build') {
+  stage('Build & Archive') {
    sh 'mvn clean package'      
    echo 'Archiving ...'
    archiveArtifacts artifacts: '/var/lib/jenkins/workspace/maven-build-deploy/webapp/target/webapp.war'   	
