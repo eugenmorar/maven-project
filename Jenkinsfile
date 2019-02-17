@@ -17,7 +17,7 @@ node('master') {
   }
   
   stage('Deploy on Tomcat') {
-   sh 'sshpass -p "eugen" scp -r **/target/webapp.war root@192.168.109.100:/var/lib/tomcat8/webapps/webapp.war'	
+   sh 'scp -r **/target/webapp.war root@192.168.109.102:/var/lib/tomcat8/webapps/webapp.war'	
   }
 
 }
